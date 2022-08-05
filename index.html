@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>YouTube Roulette</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <noscript class="error">
+        <h1>Javascipt Required</h1>
+        <p>This site requires Javascript to be enabled in order to properly
+            redirect and generate your roulette links.
+        </p>
+        <p>Please enable Javascript in your browser settings and reload
+            the page.
+        </p>
+    </noscript>
+
+    <div class="overlay">
+        <span>LOADING...</span>
+    </div>
+
+    <div class="main">
+        <h1>YouTube Roulette</h1>
+        <hr>
+
+        <h2>Overview</h2>
+        <p>Generate a video roulette using a YouTube playlist. You'll get a
+            simple roulette link that you can share to your friends! Follow the
+            steps below to create your roulette link:
+        </p>
+        <ol>
+            <li>Create a public/unlisted playlist on YouTube.</li>
+            <li>Copy the playlist link</li>
+            <li>Paste the playlist link/playlist ID in the textbox below and submit.</li>
+            <li>Your roulette link will be ready to be used.</li>
+        </ol>
+
+        <h2>Generate Roulette Link</h2>
+        <form class="input-control">
+            <div class="link-cont">
+                <label for="link-input">Playlist URL/ID:</label>
+                <input id="link-input" type="url" placeholder="https://youtube.com/playlist?list=...">
+            </div>
+            <input id="submit-btn" type="button" value="Generate URL" onclick="generateLink()">
+        </form>
+
+        <h2>Output</h2>
+        <div class="placeholder">
+            <p>No roulette link generated.</p>
+        </div>
+        <div class="output hidden">
+            <input id="roulette-url" type="url" readonly value="https://dfx81.github.io/yt-roulette?id=PLK9qojCSK8YQR12Z4W3Ce7XevatazqdHD">
+            <input id="copy-btn" type="button" value="COPY URL" onclick="copyToClipboard()">
+        </div>
+        
+        <footer>
+            <hr>
+            <small>&copy; QLYCO / dfx</small>
+        </footer>
+    </div>
+</body>
+
+</html>

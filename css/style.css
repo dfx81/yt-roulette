@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%;
+    margin: 0px;
+}
+
+footer {
+    padding-top: 16px;
+}
+
+.overlay, .error {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #001;
+}
+
+.error {
+    z-index: 100;
+}
+
+body {
+    background-color: #001;
+    color: #DDF;
+}
+
+.main {
+    width: 95%;
+    margin: auto;
+}
+
+.main > p {
+    max-width: 60ch;
+}
+
+input {
+    border: none;
+    border-radius: 8px;
+    margin: 0px;
+    padding: 8px;
+}
+
+input[type="button"]:hover {
+    outline: #DDF solid 1px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control > * {
+    margin-bottom: 4px;
+}
+
+.link-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-cont > #link-input {
+    flex-grow: 2;
+    margin-left: 8px;
+}
+
+.output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.output > * {
+    padding: 8px;
+}
+
+#roulette-url {
+    background-color: #DDF;
+    color: #336;
+    flex-grow: 2;
+    border-radius: 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+#copy-btn {
+    background-color: #0000;
+    color: #18F;
+    font-weight: bold;
+}
+
+#submit-btn {
+    text-align: center;
+    background-color: #833;
+    color: #DDF;
+}
+
+hr {
+    border: 1px solid #DDF;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        width: 50%;
+        /* border: 1px solid white; */
+    }
+
+    .input-control {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-cont {
+        flex-grow: 2;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-control > *, .link-cont > * {
+        margin: 4px;
+    }
+
+    .link-cont > #link-input {
+        flex-grow: 2;
+    }
+}
