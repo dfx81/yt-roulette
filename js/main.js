@@ -67,6 +67,20 @@ function getVideo() {
 
             localStorage.setItem(listID, JSON.stringify(cache));
             vidPicker(cache);
+        }).catch(_err => {
+            fetch("https://dfx-81.herokuapp.com/api/ping/").then(
+                res => {
+                    let error = ""
+
+                    if (res.ok) {
+                        error = "ERROR 404: The playlist ID is invalid or the playlist is private."
+                    } else {
+                        error = "ERROR 500: Our API server is currently down. Try again later.";
+                    }
+
+                    overlay.children[0].innerText = error;
+                }
+            );
         });
 }
 
